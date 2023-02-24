@@ -1,0 +1,26 @@
+.navbar{
+    background-color: rgba(203, 253, 253, 0.1);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  .ele{
+    list-style: none;
+    display: flex;
+    margin: 2px;
+  }
+
+  .hov{
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+  }
+  .hov:hover{
+    color: white;
+    cursor: pointer;
+  }
+  
