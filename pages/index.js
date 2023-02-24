@@ -71,7 +71,6 @@ export default function Home() {
           start:'25% 39.5%',
  
           toggleActions:'restart pause reverse pause',
-          markers:true,
           scrub:true,
           pin:contain.current
         }
@@ -95,12 +94,20 @@ export default function Home() {
           start:'75% 29%',
  
           toggleActions:'restart pause reverse pause',
-          markers:true,
           scrub:true,
           pin:contain1.current
         }
       })
   })
+  let style = {
+    height:'5rem',
+    width:'10rem',
+    margin:'1rem',
+    borderRadius:'25%/50%',
+    fontSize:'1.5rem',
+    backgroundColor:'rgb(20,95,95)',
+    color:'white'
+  }
 
   return (
     <>
@@ -109,7 +116,7 @@ export default function Home() {
         <Typography variant='h1'className={styles.typo}>
           Welcome to the world of imagination
           </Typography>
-        <div className={styles.buttoncontainer}><Button variant='contained' className={styles.button}>Sign In</Button><Button variant='contained' className={styles.button}>Join</Button></div>
+        <div style={{margin:'1rem'}}><Button variant='contained' style={style}>Sign In</Button><Button variant='contained' style={style}>Join</Button></div>
       </div>
       </div>
       <div className={styles.panel2}
@@ -124,6 +131,7 @@ export default function Home() {
        <div className={styles.img}>
 
        </div>
+      
        </div>
        <div className={styles.panel3}>
         
