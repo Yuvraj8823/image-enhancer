@@ -30,29 +30,29 @@ export default function Home() {
     })
   })
 
-  let text2 = useRef(null)
-  useEffect(()=>{
-    let textLiftAnimation = gsap.timeline()
-    textLiftAnimation.to(text2.current,{
-      opacity:1,
-      y:-30,
-      ease:Power3.easeOut,
-      duration:2,
-      delay:0.5
-    })
-  })
+  // let text2 = useRef(null)
+  // useEffect(()=>{
+  //   let textLiftAnimation = gsap.timeline()
+  //   textLiftAnimation.to(text2.current,{
+  //     opacity:1,
+  //     y:-30,
+  //     ease:Power3.easeOut,
+  //     duration:2,
+  //     delay:0.5
+  //   })
+  // })
   
-  let text3 = useRef(null)
-  useEffect(()=>{
-    let textLiftAnimation = gsap.timeline()
-    textLiftAnimation.to(text3.current,{
-      opacity:1,
-      y:-30,
-      ease:Power3.easeOut,
-      duration:2,
-      delay:0.5,
-    })
-  })
+  // let text3 = useRef(null)
+  // useEffect(()=>{
+  //   let textLiftAnimation = gsap.timeline()
+  //   textLiftAnimation.to(text3.current,{
+  //     opacity:1,
+  //     y:-30,
+  //     ease:Power3.easeOut,
+  //     duration:2,
+  //     delay:0.5,
+  //   })
+  // })
 
 // for resolution scaling animation
 
@@ -68,7 +68,7 @@ export default function Home() {
         duration:10,
         scrollTrigger:{
           trigger:'blurr',
-          start:'25% 39.5%',
+          start:'26% 42.9%',
  
           toggleActions:'restart pause reverse pause',
           scrub:true,
@@ -91,7 +91,7 @@ export default function Home() {
         duration:10,
         scrollTrigger:{
           trigger:'blurr1',
-          start:'75% 29%',
+          start:'75% 24.8%',
  
           toggleActions:'restart pause reverse pause',
           scrub:true,
@@ -99,15 +99,7 @@ export default function Home() {
         }
       })
   })
-  let style = {
-    height:'5rem',
-    width:'10rem',
-    margin:'1rem',
-    borderRadius:'25%/50%',
-    fontSize:'1.5rem',
-    backgroundColor:'rgb(20,95,95)',
-    color:'white'
-  }
+  
 
   return (
     <>
@@ -116,13 +108,15 @@ export default function Home() {
         <Typography variant='h1'className={styles.typo}>
           Welcome to the world of imagination
           </Typography>
-        <div style={{margin:'1rem'}}><Button variant='contained' style={style}>Sign In</Button><Button variant='contained' style={style}>Join</Button></div>
+        <div className={styles.buttoncontainer}><Button variant='contained' className={styles.button}>Sign In</Button><Button variant='contained' className={styles.button}>Join</Button>
+      </div>
       </div>
       </div>
       <div className={styles.panel2}
+      
       ref={contain}
       >
-        
+        <Typography variant='h4' className={styles.text1}>Resolution Scaling</Typography>
         <div className={styles.blur}
         ref={blurr}
         >
@@ -131,14 +125,14 @@ export default function Home() {
        <div className={styles.img}>
 
        </div>
-      
+        
        </div>
        <div className={styles.panel3}>
         
        </div>
        <div className={styles.panel4}
        ref={contain1}
-       >
+       ><Typography variant='h4' className={styles.text1}>Low Light Enhancement</Typography>
         <div className={styles.blur2}
         ref={blurr1}
         ></div>
